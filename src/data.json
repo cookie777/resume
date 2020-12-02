@@ -1,0 +1,26 @@
+{
+    "basic":{
+        "name":"Takayuki Yamaguchi",
+        "email": "l.oeil.ballon@gmail.com",
+        "github":"github.com/cookie777",
+        "phone":"+1-236-982-9712"
+    },
+    "article":[
+        {
+            "title": "Education",
+            "contents":[
+                {
+                    "secondTitle":"Cornerstone International Community College of Canada (CICCC)",
+                    "term":"Vancouver, Canada / Sep 2020 –",
+                    "text":"Learning web design skills with React.js.  Learning OOP with Java, Android, and Swift languages for mobile app development. "
+                },
+                {
+                    "secondTitle":"Tokyo Metropolitan University",
+                    "term":"Tokyo, Japan / April 2014 – March 2016",
+                    "text":"Master of Computer and Information Sciences. Specialized in Recommender system and information visualization. Cumulative GPA 3.3/4.0"
+                }
+            ]
+        }
+
+    ]
+}
