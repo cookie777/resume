@@ -30,9 +30,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Playfair Display', serif;
         color: ${styledVariables["secondary-color-l"]};
     }
-    P{
-        margin-bottom: 1rem;
-    }
 `;
 
 const H1 = styled.h1`
@@ -58,6 +55,10 @@ const H3 = styled.h3`
         color: ${styledVariables["secondary-color"]};
 `;
 
+const Text = styled.p`
+        margin-bottom: 1rem;
+`;
+
 const SubText = styled.p`
         margin-bottom: 0.5rem;  
         font-size: 0.875rem;
@@ -65,4 +66,9 @@ const SubText = styled.p`
         color: ${styledVariables["secondary-color-l-ex"]};
 `;
 
-export {GlobalStyle, H1,H2,H3,SubText};
+const Section = styled.section`
+        margin-bottom:2.5rem;
+`;
+
+
+export {GlobalStyle, Section, H1,H2,H3,Text,SubText};

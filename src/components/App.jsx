@@ -6,26 +6,30 @@ import {GlobalStyle} from "./Styled";
 import data from "../data.json";
 
 import Header from "./Header";
-import Article from "./Article";
+import Post from "./Post";
 
-const Articles = styled(Article)`
-    color: palevioletred;
-    margin-bottom: 2.5rem;
+const Grid = styled.div`
+        display:grid;
+        grid-auto-flow: column;
+        column-gap: 7rem;
+        grid-template-columns:4fr 5fr;
+        grid-template-rows: auto auto;
+
 `;
-
-
 
 function App(){
     return(
         <React.Fragment>
             <GlobalStyle/>
             <Header basic={data.basic} />
-            {data.article.map((section,id)=>{
-                return(
-                    <Articles article={section} key={id}/>
-                )                
-            })}
-            <Articles article={data.article[0]}/>
+            <Grid>
+                {data.article.map((section,id)=>{
+                    return(
+                        <Post article={section} key={id}/>
+                    )                
+                })}
+            </Grid>
+
         </React.Fragment>
     );
 }
