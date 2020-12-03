@@ -1,14 +1,32 @@
 import React from "react";
+
+import styled from 'styled-components';
+import {GlobalStyle} from "./Styled";
+
+import data from "../data.json";
+
 import Header from "./Header";
 import Article from "./Article";
-import data from "../data.json";
+
+const Articles = styled(Article)`
+    color: palevioletred;
+    margin-bottom: 2.5rem;
+`;
+
+
 
 function App(){
     return(
-        <div>
+        <React.Fragment>
+            <GlobalStyle/>
             <Header basic={data.basic} />
-            <Article article={data.article[0]}/>
-        </div>
+            {data.article.map((section,id)=>{
+                return(
+                    <Articles article={section} key={id}/>
+                )                
+            })}
+            <Articles article={data.article[0]}/>
+        </React.Fragment>
     );
 }
 

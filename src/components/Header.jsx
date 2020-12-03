@@ -1,9 +1,10 @@
 import React from "react";
+import {H1} from "./Styled";
 
 function Header(props){
     return(
         <div>
-            <h1>{props.basic.name}</h1>
+            <H1>{props.basic.name}</H1>
             <ul>
                 <li>{props.basic.email}</li>
                 <li>{props.basic.github}</li>
