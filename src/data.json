@@ -16,8 +16,48 @@
                 },
                 {
                     "secondTitle":"Tokyo Metropolitan University",
-                    "term":"Tokyo, Japan / April 2014 – March 2016",
+                    "term":"Tokyo, Japan / Apr 2014 – Mar 2016",
                     "text":"Master of Computer and Information Sciences. Specialized in Recommender system and information visualization. Cumulative GPA 3.3/4.0"
+                }
+            ]
+        },
+        {
+            "title": "Volunteer",
+            "contents":[
+                {
+                    "secondTitle":"",
+                    "term":"International Exchange Association / Tokyo, Japan/ Jun 2011 – Dec 2014",
+                    "text":"Showed international students the sights. Gave international students advice mainly related to the University. Taught international students Japanese culture and language."
+                }
+            ]
+        },
+        {
+            "title": "Work experience",
+            "contents":[
+                {
+                    "secondTitle":"Video and Audio Engineer",
+                    "term":"Hiroshima, Japan /  Apr 2016 – Aug 2020",
+                    "text":"Broadcasted news by coordinating video and audio at the production control room. Coordinated equipments such as cameras, audio mixers, and servers. Directed operation and maintenance for network systems."
+                }
+            ]
+        },
+        {
+            "title": "Projects",
+            "contents":[
+                {
+                    "secondTitle":"Development / App and landing page",
+                    "term":"CICCC / Canada, Vancouver /  Nov 2020",
+                    "text":"Created desktop app with Java collaborating other developer. In addition to the app, created landing page to promote it by using html, sass."
+                },
+                {
+                    "secondTitle":"Research / Recommender system ",
+                    "term":"Tokyo Metropolitan University / Tokyo, Japan / Apr 2014 – Mar 2016",
+                    "text":"Proposed new method based on users' rating for a recommender system, and built the system based on it using Ruby on Rails. Conducted user experiment by using the system and collecting questionnaires. Publish a paper to the International Association."
+                },
+                {
+                    "secondTitle":"Research  / Signal processing",
+                    "term":"Tokyo Metropolitan University / Tokyo, Japan / April 2013 – March 2014",
+                    "text":"Proposed new algorithm for image noise reduction with less processing time. Proofed the effectiveness of the method through the simulation.  Published a paper to the International Association."
                 }
             ]
         }

@@ -1,14 +1,16 @@
 import React from "react";
+import {H1,H2,H3,SubText} from "./Styled";
+
 
 function Article(props){
     return(
-        <div>
-            <h1>{props.article.title}</h1>
+        <div className={props.className}>
+            <H2>{props.article.title}</H2>
             {props.article.contents.map((content, id)=>{
                 return(
                     <div key={id}>
-                        <h2>{content.secondTitle}</h2>
-                        <p>{content.term}</p>
+                        <H3>{content.secondTitle}</H3>
+                        <SubText>{content.term}</SubText>
                         <p>{content.text}</p>
                     </div>
                 )
