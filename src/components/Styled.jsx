@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
         
     html{
-        * { 
+        /* * { 
             outline: 2px solid rgba(218, 65, 65, 0.426);
             outline-offset: -1px;
-        }
+        } */
         font-size:16px;
 
     }
@@ -57,6 +57,7 @@ const H3 = styled.h3`
 
 const Text = styled.p`
         margin-bottom: 1rem;
+        line-height: 168%;
 `;
 
 const SubText = styled.p`

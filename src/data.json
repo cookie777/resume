@@ -5,7 +5,35 @@
         "github":"github.com/cookie777",
         "phone":"+1-236-982-9712"
     },
-    "article":[
+    "post":[
+        {
+            "title": "Skills",
+            "contents":[
+                {
+                    "secondTitle":"Languages",
+                    "term":"",
+                    "text":[
+                        "Swift",
+                        "Java",
+                        "Python 3",
+                        "React.js",
+                        "HTML",
+                        "SASS"
+                        ]
+                },
+                {
+                    "secondTitle":"Tools",
+                    "term":"",
+                    "text":[
+                        "Docker",
+                        "Xcode",
+                        "Sketch",
+                        "Figma",
+                        "Git, Git hub"
+                    ]
+                }
+            ]
+        },
         {
             "title": "Education",
             "contents":[

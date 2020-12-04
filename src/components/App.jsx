@@ -11,10 +11,15 @@ import Post from "./Post";
 const Grid = styled.div`
         display:grid;
         grid-auto-flow: column;
-        column-gap: 7rem;
         grid-template-columns:4fr 5fr;
-        grid-template-rows: auto auto;
-
+        grid-template-rows: repeat(3,auto);
+        section {
+            &:last-child{
+                grid-row-start: 2;
+                grid-row-end: span 2;
+            }
+        }
+        column-gap: 7rem;
 `;
 
 function App(){
@@ -23,9 +28,9 @@ function App(){
             <GlobalStyle/>
             <Header basic={data.basic} />
             <Grid>
-                {data.article.map((section,id)=>{
+                {data.post.map((val,id)=>{
                     return(
-                        <Post article={section} key={id}/>
+                        <Post post={val} key={id}/>
                     )                
                 })}
             </Grid>
