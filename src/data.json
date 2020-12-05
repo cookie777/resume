@@ -1,9 +1,14 @@
 {
     "basic":{
-        "name":"Takayuki Yamaguchi",
-        "email": "l.oeil.ballon@gmail.com",
-        "github":"github.com/cookie777",
-        "phone":"+1-236-982-9712"
+        "name":[
+            "Takayuki", 
+            "Yamaguchi"
+        ],
+        "contact":[
+            "l.oeil.ballon@gmail.com",
+            "github.com/cookie777",
+            "+1-236-982-9712"
+        ]
     },
     "post":[
         {
@@ -50,17 +55,7 @@
             ]
         },
         {
-            "title": "Volunteer",
-            "contents":[
-                {
-                    "secondTitle":"",
-                    "term":"International Exchange Association / Tokyo, Japan/ Jun 2011 – Dec 2014",
-                    "text":"Showed international students the sights. Gave international students advice mainly related to the University. Taught international students Japanese culture and language."
-                }
-            ]
-        },
-        {
-            "title": "Work experience",
+            "title": "Work Experience",
             "contents":[
                 {
                     "secondTitle":"Video and Audio Engineer",
