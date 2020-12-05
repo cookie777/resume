@@ -15,7 +15,7 @@
             "title": "Skills",
             "contents":[
                 {
-                    "secondTitle":"Languages",
+                    "secondTitle":"Programing Languages",
                     "term":"",
                     "text":[
                         "Swift",
@@ -34,7 +34,7 @@
                         "Xcode",
                         "Sketch",
                         "Figma",
-                        "Git, Git hub"
+                        "Git, GitHub"
                     ]
                 }
             ]
