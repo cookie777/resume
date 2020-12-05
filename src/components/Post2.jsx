@@ -9,7 +9,6 @@ const Grid = styled(Section)`
     grid-template-columns: 3fr 7fr;
     column-gap: 7rem;
 `;
-
 const Item = styled.div`
     margin-bottom: 1.5rem;
     &:last-child{
@@ -17,8 +16,15 @@ const Item = styled.div`
     }
 `;
 
-function Post(props){
-    // console.log(props.post)
+const Flex = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    & > div{
+        margin-right: 2rem;
+    }
+`;
+
+function Post2(props){
     return(
         <Grid>
             <H2>{props.post.title}</H2>
@@ -27,15 +33,21 @@ function Post(props){
                     return(
                         <Item key={id}>
                             <H3>{content.secondTitle}</H3>
-                            <SubText>{content.term}</SubText>
-                            <Text>{content.text}</Text>
+                            <Flex>
+                                {content.text.map((val,id)=>{
+                                    return(
+                                        <div key={id}>
+                                            {val}
+                                        </div>
+                                    )
+                                })}
+                            </Flex>
                         </Item>
                     )
                 })}
             </div>
-
         </Grid>
     )
 }
 
-export default Post;
+export default Post2;

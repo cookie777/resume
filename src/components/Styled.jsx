@@ -13,15 +13,14 @@ const styledVariables = {
 const GlobalStyle = createGlobalStyle`
     ${reset}
         
+    * { 
+        /* outline: 2px solid rgba(218, 65, 65, 0.426);
+        outline-offset: -1px; */
+        box-sizing: border-box;
+    }
     html{
-        /* * { 
-            outline: 2px solid rgba(218, 65, 65, 0.426);
-            outline-offset: -1px;
-            
-        } */
-        *{
-            box-sizing: border-box;
-        }
+        background-color:${styledVariables["primary-color"]};
+        background-color:whitesmoke;
         font-size:16px;
 
     }
@@ -35,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const H1 = styled.h1`
+        margin-top:-1rem;
         font-size: 4rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;
@@ -44,13 +44,15 @@ const H1 = styled.h1`
         
 `;
 const H2 = styled.h2`
+        margin-top:-0.5rem;
         font-size: 2rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;
+        line-height:128%;
         color: ${styledVariables["secondary-color"]};
 `;
 const H3 = styled.h3`
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         font-size: 1.125rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;
