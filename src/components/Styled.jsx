@@ -12,13 +12,15 @@ const styledVariables = {
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
         
     html{
-        * { 
+        /* * { 
             outline: 2px solid rgba(218, 65, 65, 0.426);
             outline-offset: -1px;
+            
+        } */
+        *{
+            box-sizing: border-box;
         }
         font-size:16px;
 
@@ -30,22 +32,19 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Playfair Display', serif;
         color: ${styledVariables["secondary-color-l"]};
     }
-    P{
-        margin-bottom: 1rem;
-    }
 `;
 
 const H1 = styled.h1`
-        margin-bottom: 2rem;
         font-size: 4rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;
+        line-height: 124.8%;
+        letter-spacing: 2.5%;
         color: ${styledVariables["secondary-color"]};
         
 `;
 const H2 = styled.h2`
-        margin-bottom: 1.5rem;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;
         color: ${styledVariables["secondary-color"]};
@@ -58,6 +57,10 @@ const H3 = styled.h3`
         color: ${styledVariables["secondary-color"]};
 `;
 
+const Text = styled.p`
+        line-height: 168%;
+`;
+
 const SubText = styled.p`
         margin-bottom: 0.5rem;  
         font-size: 0.875rem;
@@ -65,4 +68,9 @@ const SubText = styled.p`
         color: ${styledVariables["secondary-color-l-ex"]};
 `;
 
-export {GlobalStyle, H1,H2,H3,SubText};
+const Section = styled.section`
+        margin-bottom:3rem;
+`;
+
+
+export {GlobalStyle, Section, H1,H2,H3,Text,SubText};
