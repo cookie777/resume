@@ -19,25 +19,23 @@ const Paper = styled.div`
 function Resume(props){
     const data = props.children;
     return(
-        <React.Fragment>
-            <Paper>
-                <Hero>
-                    {data.basic}
-                </Hero>
-                {data.post.map((article,id)=>{
-                    return(
-                        (article.title === "Skills") ?
-                                <ListArticle key={id}>
-                                    {article}
-                                </ListArticle>
-                            :
-                                <DescriptionArticle key={id}>
-                                    {article}
-                                </DescriptionArticle>
-                    );
-                })}
-            </Paper>
-        </React.Fragment>
+        <Paper>
+            <Hero>
+                {data.basic}
+            </Hero>
+            {data.post.map((article,id)=>{
+                return(
+                    (article.title === "Skills") ?
+                            <ListArticle key={id}>
+                                {article}
+                            </ListArticle>
+                        :
+                            <DescriptionArticle key={id}>
+                                {article}
+                            </DescriptionArticle>
+                );
+            })}
+        </Paper>
     );
 }
 
