@@ -1,11 +1,13 @@
 import React from "react";
 import {Text} from "./Styled";
 
+
 // display array data as list with new line
 function List(props){
+    const arr = props.children;
     return(
-        <React.Fragment>
-            {props.list.map((val,id)=>{
+        <div>
+            {arr && arr.map((val,id)=>{
                 return(
                     <React.Fragment key={id}>
                         {val}
@@ -13,7 +15,7 @@ function List(props){
                     </React.Fragment>
                 )
             })}
-        </React.Fragment>   
+        </div>   
         
     
     );

@@ -2,6 +2,8 @@ import React from "react";
 import List from "./List";
 import {H1, Section, Text} from "./Styled";
 import styled from 'styled-components';
+import LargeTitle from "./atoms/title/LargeTitle";
+import HorizontalList from "./atoms/list/HorizontalList";
 
 const Grid = styled.div`
     display: grid;
@@ -15,9 +17,11 @@ function Header(props){
     return(
         <Section>
             <Grid>
-                <H1>
-                    <List list={props.basic.name}/> 
-                </H1>
+                <LargeTitle>
+                    <HorizontalList>
+                        {props.basic.name}
+                    </HorizontalList> 
+                </LargeTitle>
                 <Text>
                     <List list={props.basic.contact}/> 
                 </Text>

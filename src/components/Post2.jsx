@@ -2,6 +2,9 @@ import React from "react";
 import {Section,H2,H3,Text,SubText} from "./Styled";
 import styled from 'styled-components';
 import List from "./List";
+import HorizontalList from "./atoms/list/HorizontalList";
+import VerticalList from "./atoms/list/VerticalList";
+import ListCard from "./molecules/card/ListCard";
 
 const Grid = styled(Section)`
     display:grid;
@@ -32,16 +35,9 @@ function Post2(props){
                 {props.post.contents.map((content, id)=>{
                     return(
                         <Item key={id}>
-                            <H3>{content.secondTitle}</H3>
-                            <Flex>
-                                {content.text.map((val,id)=>{
-                                    return(
-                                        <div key={id}>
-                                            {val}
-                                        </div>
-                                    )
-                                })}
-                            </Flex>
+                            <ListCard>
+                                {content}
+                            </ListCard>
                         </Item>
                     )
                 })}

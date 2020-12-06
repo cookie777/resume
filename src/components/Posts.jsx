@@ -1,17 +1,21 @@
 import React from "react";
 import styled from 'styled-components';
-import Post from "./Post";
-import Post2 from "./Post2";
+import ListArticle from "./organisms/article/DescriptionArticle";
+import DescriptionArticle from "./organisms/article/DescriptionArticle";
 
 
 function Posts(props){
     if (props.post.title === "Skills"){
         return(
-            <Post2 post= {props.post}/>
+            <ListArticle>
+                {props.post}
+            </ListArticle>
         );        
     }else{
         return(
-            <Post post={props.post}/>
+            <DescriptionArticle>
+                {props.post}
+            </DescriptionArticle>
         );
     }
 }

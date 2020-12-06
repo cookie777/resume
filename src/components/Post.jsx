@@ -2,6 +2,9 @@ import React from "react";
 import {Section,H2,H3,Text,SubText} from "./Styled";
 import styled from 'styled-components';
 import List from "./List";
+import Paragraph from "./atoms/text/Paragraph";
+import Supplement from "./atoms/text/Supplement";
+import DescriptionCard from "./molecules/card/DescriptionCard";
 
 const Grid = styled(Section)`
     display:grid;
@@ -26,9 +29,9 @@ function Post(props){
                 {props.post.contents.map((content, id)=>{
                     return(
                         <Item key={id}>
-                            <H3>{content.secondTitle}</H3>
-                            <SubText>{content.term}</SubText>
-                            <Text>{content.text}</Text>
+                            <DescriptionCard>
+                                {content}
+                            </DescriptionCard>
                         </Item>
                     )
                 })}

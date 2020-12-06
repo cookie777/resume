@@ -14,8 +14,8 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
         
     * { 
-        /* outline: 2px solid rgba(218, 65, 65, 0.426);
-        outline-offset: -1px; */
+        outline: 2px solid rgba(218, 65, 65, 0.426);
+        outline-offset: -1px;
         box-sizing: border-box;
     }
     html{
@@ -75,4 +75,4 @@ const Section = styled.section`
 `;
 
 
-export {GlobalStyle, Section, H1,H2,H3,Text,SubText};
+export {GlobalStyle,styledVariables, Section, H1,H2,H3,Text,SubText};
