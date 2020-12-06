@@ -11,7 +11,7 @@ const Grid = styled.div`
     column-gap: 7rem;
 `;
 
-function ListArticle(props){
+function DescriptionArticle(props){
     const data = props.children;
     return(
         <Grid>
@@ -31,4 +31,4 @@ function ListArticle(props){
     );
 }
 
-export default ListArticle;
+export default DescriptionArticle;
