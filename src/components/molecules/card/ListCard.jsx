@@ -1,6 +1,5 @@
 import React from 'react';
 import HorizontalList from '../../atoms/list/HorizontalList';
-import Supplement from '../../atoms/text/Supplement';
 import SmallTitle from '../../atoms/title/SmallTitle';
 
 function ListCard(props){
