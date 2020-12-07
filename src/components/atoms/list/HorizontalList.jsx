@@ -15,8 +15,9 @@ import styled from 'styled-components';
 const Flex = styled.div`
     display:flex;
     flex-wrap: wrap;
+    gap: 1rem;
     & > div{
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
 `;
 

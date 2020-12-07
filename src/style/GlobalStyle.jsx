@@ -32,4 +32,4 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 
-export {GlobalStyle,styledVariables};
+export {GlobalStyle, styledVariables};
