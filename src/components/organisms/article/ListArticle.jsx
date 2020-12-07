@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mq } from '../../../style/MediaQuery';
 import MediumTitle from '../../atoms/title/MediumTitle';
 import ListCard from '../../molecules/card/ListCard';
 
@@ -9,6 +10,10 @@ const Grid = styled.div`
     grid-auto-flow:column;
     grid-template-columns: 2fr 7fr;
     column-gap: 7rem;
+    ${mq("lg")`
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    `};
 `;
 
 function ListArticle(props){

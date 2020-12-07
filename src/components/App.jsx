@@ -1,5 +1,5 @@
 import React from "react";
-import {GlobalStyle} from "./Styled";
+import {GlobalStyle} from "../style/GlobalStyle";
 import data from "../data.json";
 import Resume from "./templates/Resume";
 

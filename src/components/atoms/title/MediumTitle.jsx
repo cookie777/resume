@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import {styledVariables} from '../../Styled';
+import {styledVariables} from '../../../style/GlobalStyle';
 
 const H2 = styled.h2`
         margin-top:-0.5rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;

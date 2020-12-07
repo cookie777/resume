@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import {styledVariables} from '../../Styled';
+import {styledVariables} from '../../../style/GlobalStyle';
 
 const P = styled.p`
     font-size: 1em;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {styledVariables} from '../../Styled';
+import {styledVariables} from '../../../style/GlobalStyle';
+import { mq } from '../../../style/MediaQuery';
 
 const H1 = styled.h1`
         font-family: Oswald, sans-serif;
@@ -10,6 +11,10 @@ const H1 = styled.h1`
         line-height: 124.8%;
         letter-spacing: 2.5%;
         color: ${styledVariables["secondary-color"]};
+        ${mq("md")`
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        `};
         
 `;
 
