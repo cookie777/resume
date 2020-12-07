@@ -7,7 +7,7 @@ const Grid = styled.div`
     margin-bottom:3rem;
     display:grid;
     grid-auto-flow:column;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 2fr 7fr;
     column-gap: 7rem;
 `;
 
