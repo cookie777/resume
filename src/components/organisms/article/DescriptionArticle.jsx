@@ -14,6 +14,7 @@ const Grid = styled.div`
     column-gap: 7rem;
     ${mq("lg")`
         display: block;
+        margin-bottom:4rem;
     `};
 `;
 

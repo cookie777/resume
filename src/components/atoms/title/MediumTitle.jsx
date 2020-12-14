@@ -4,7 +4,7 @@ import {styledVariables} from '../../../style/GlobalStyle';
 
 const H2 = styled.h2`
         margin-top:-0.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: 2rem;
         font-weight: 700;
         font-family: Oswald, sans-serif;

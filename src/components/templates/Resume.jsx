@@ -8,9 +8,9 @@ import { mq } from '../../style/MediaQuery';
 
 const Paper = styled.div`
     max-width: 1080px;
-    min-width: 440px;
-    max-height: calc(1080px*1.2941);
-    margin: 4rem auto;
+    min-width: 300px;
+    max-height: max(calc(1080px * 1.2941), calc(1080px * 1.2941 + calc( 1080px - 100vw )* 100));
+    margin: 4rem max(1rem, calc((100vw - 1080px)/2));
     padding: 5rem 7rem;
     background-color:#f1f5f7;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -18,6 +18,9 @@ const Paper = styled.div`
     position: relative; 
     ${mq("lg")`
         max-height: none;
+    `};   
+    ${mq("md")`
+        padding: 4rem 2rem;
     `};   
 `;
 
