@@ -11,8 +11,8 @@ const Grid = styled.div`
     grid-template-columns: 2fr 7fr;
     column-gap: 7rem;
     ${mq("lg")`
-        grid-template-columns: 1fr;
-        grid-auto-flow: row;
+        display: block;
+        margin-bottom:4rem;
     `};
 `;
 
