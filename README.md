@@ -1,4 +1,44 @@
-# Getting Started with Create React App
+# Resume
+
+- This is a super simple web project represents my resume.
+- Regardless of its simplicity, it includes very fundamental and vital tech used in front end, such as
+    - React.js
+    - Atomic design pattern
+    - Styled component
+    - Responsive design
+    
+
+# Atomic design pattern
+
+- To make an efficient and reusable website, I applied the Atomic design pattern.
+- First, I created very basic component as atoms, such as `Large Text` and `Small Text`.
+- Then, created modules that are combination of atoms
+- Finally, created higher level pages by assembling those modules and atoms
+![resume-atomic-design](./src/img/resume-atomic-design.jpg)
+
+# Embedded styled component
+
+- To realize atomic design, I also used styled component instead of using plane CSS and SASS
+- Each atomic is combination of react component and styed component
+- img here
+
+# Style guide
+- To realize atomic design, I first created style guide
+- By creating style guide is deeply connected to component(atoms)
+- I created 3 types of mock-up and ask my neighbors and colleagues that which is best
+
+*show guid + 3 mock up
+
+# Responsive
+- To make it readable in multiple device, this website has responsive design
+ *animation
+- To realize this, I set 3 break-points common used in 2020.
+- Usually, these day, we use mobile first as break points, but this time I adopted "desktop first" because the resume is supposed to seen as letter size .
+- To make responsive design and decent appearance, `calc` was well used for adjusting size.
+    - code 1
+    - code 2
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +107,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
