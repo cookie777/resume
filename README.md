@@ -16,24 +16,76 @@
 - Finally, created higher level pages by assembling those modules and atoms
 ![resume-atomic-design](./src/img/resume-atomic-design.jpg)
 
+
+
+
 # Embedded styled component
 
 - To realize atomic design, I also used styled component instead of using plane CSS and SASS
 - Each atomic is combination of react component and styed component
-- img here
+- Example code: when you want to create medium title (heading), it is realized by one component which is a combination of "styed component" and "react function"
+
+
+```javascript
+const H2 = styled.h2`
+        margin-top:-0.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: Oswald, sans-serif;
+        line-height:128%;
+        color: ${styledVariables["secondary-color"]};
+`;
+
+function MediumTitle(props){
+    return(
+        <H2>{props.children}</H2>
+    );
+}
+```
 
 # Style guide
 - To realize atomic design, I first created style guide
 - By creating style guide is deeply connected to component(atoms)
 - I created 3 types of mock-up and ask my neighbors and colleagues that which is best
 
-*show guid + 3 mock up
+![design-guide](./src/img/design-guide.svg)
+![mock-ups](./src/img/mock-up.png)
 
 # Responsive
+### Break points
 - To make it readable in multiple device, this website has responsive design
  *animation
-- To realize this, I set 3 break-points common used in 2020.
-- Usually, these day, we use mobile first as break points, but this time I adopted "desktop first" because the resume is supposed to seen as letter size .
+- To realize this, I set four break-points common used in 2020, and created a function so that I can easily call and use it
+- How I set break points
+```javascript
+const breakpoints = {
+        sm: 575.98,
+        md: 767.98,
+        lg: 991.98,
+        xlg:1199.98
+}
+
+export const mq = (width) => {
+    return(
+        style => `@media (max-width: ${breakpoints[width]}px) { ${style} }`
+    );
+}
+```
+
+- Usage example: by wrapping `${mq({parameter})` //code  `};`, you can easily use and manage breakpoints.
+```javascript
+const Grid = styled.div`
+    // other codes
+    ${mq("lg")`
+        display: block;
+        margin-bottom:4rem;
+    `};
+`;
+```
+- Usually these days, we use mobile first as break points, but this time I adopted "desktop first" because the resume is supposed to seen as letter size
+
+### calc
 - To make responsive design and decent appearance, `calc` was well used for adjusting size.
     - code 1
     - code 2
