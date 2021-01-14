@@ -1,7 +1,7 @@
 # Resume
 
-- This is a super simple web project represents my resume.
-- Regardless of its simplicity, it includes very fundamental and vital tech used in front end, such as
+- This is a super simple web project that represents my resume.
+- Regardless of its simplicity, it includes very fundamental and vital tech used in the front end, such as
     - React.js
     - Atomic design pattern
     - Styled component
@@ -11,9 +11,9 @@
 # Atomic design pattern
 
 - To make an efficient and reusable website, I applied the Atomic design pattern.
-- First, I created very basic component as atoms, such as `Large Text` and `Small Text`.
-- Then, created modules that are combination of atoms
-- Finally, created higher level pages by assembling those modules and atoms
+- First, I created a very basic component as atoms, such as `Large Text` and `Small Text`.
+- Then, created modules that are the combination of atoms
+- Finally, created higher-level pages by assembling those modules and atoms
 ![resume-atomic-design](./src/img/resume-atomic-design.jpg)
 
 
@@ -21,9 +21,9 @@
 
 # Embedded styled component
 
-- To realize atomic design, I also used styled component instead of using plane CSS and SASS
-- Each atomic is combination of react component and styed component
-- Example code: when you want to create medium title (heading), it is realized by one component which is a combination of "styed component" and "react function"
+- To realize the atomic design, I also used styled component instead of using plane CSS and SASS
+- Each atomic is a combination of react component and styled-component
+- Example code: when you want to create a medium title (heading), it is realized by one component which is a combination of "styled-components" and "React-function"
 
 
 ```javascript
@@ -45,8 +45,8 @@ function MediumTitle(props){
 ```
 
 # Style guide
-- To realize atomic design, I first created style guide
-- By creating style guide is deeply connected to component(atoms)
+- To realize the atomic design, I first created a style guide
+- By creating the style guide is deeply connected to component(atoms)
 - I created 3 types of mock-up and ask my neighbors and colleagues that which is best
 
 ![design-guide](./src/img/design-guide.svg)
@@ -54,10 +54,14 @@ function MediumTitle(props){
 
 # Responsive
 ### Break points
-- To make it readable in multiple device, this website has responsive design
- *animation
-- To realize this, I set four break-points common used in 2020, and created a function so that I can easily call and use it
-- How I set break points
+- To make it readable on multiple devices, this website has a responsive design
+
+ ![responsive-image](./src/img/responsive-overview.webp)
+
+
+- To realize this, I set four break-points common used in 2020 and created a function so that I can easily call and use it
+- How I set breakpoints
+
 ```javascript
 const breakpoints = {
         sm: 575.98,
@@ -83,80 +87,29 @@ const Grid = styled.div`
     `};
 `;
 ```
-- Usually these days, we use mobile first as break points, but this time I adopted "desktop first" because the resume is supposed to seen as letter size
+- Usually these days, we use mobile-first as breakpoints, but this time I adopted "desktop first" because the resume is supposed to see as letter size
 
-### calc
-- To make responsive design and decent appearance, `calc` was well used for adjusting size.
-    - code 1
-    - code 2
+### Keep the aspect ratio
+- To realize the precise letter size of ration, which is `1: 1.2941`, I used `calc` and `max` features.
 
-<!-- # Getting Started with Create React App
+1. As long as the resume width is 1080px, I want to keep the real letter ratio, and when the width gets smaller than 1080px, I allow the ratio to collapse so that it can contain all the contents. (which means responsive)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```css
+    max-height: max(calc(1080px * 1.2941), calc(1080px * 1.2941 + calc( 1080px - 100vw )* 100));
+```
+- This code enables that when the view width is more than 1080px, it keeps the height `calc(1080px * 1.2941)`, and when the width gets less than 1080px, the height gets larger than 1080px * 1.2941
+- This is possible because when the view width is less than 1080px, `calc( 1080px - 100vw )` gets positive and added to `1080px * 1.2941 `, which means it gets larger than 1080px * 1.2941.
 
-## Available Scripts
+2. To make a better resume, I always try to set spaces(margin) horizontally. 
+When the view width is large enough, I let it to have natural space like center align. When it gets shorter, I intentionally set margin 1rem.
 
-In the project directory, you can run:
+```css
+    margin: 4rem max(1rem, calc((100vw - 1080px)/2));
+```
+- `calc((100vw - 1080px)/2)` let resume to have 1080px with enough space.
+- When the spaces gets shorter, it will still keep 1rem.
 
-### `npm start`
+![responsive-image](./src/img/responsive-margin.webp)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
