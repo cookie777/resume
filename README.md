@@ -14,6 +14,7 @@
 - First, I created a very basic component as atoms, such as `Large Text` and `Small Text`.
 - Then, created modules that are the combination of atoms
 - Finally, created higher-level pages by assembling those modules and atoms
+
 ![resume-atomic-design](./src/img/resume-atomic-design.jpg)
 
 
